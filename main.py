@@ -109,7 +109,7 @@ async def send_welcome_message(member):
         )
         await channel.send(embed=embed)
 
-@tasks.loop(minutes=5)
+@tasks.loop(minutes=10)
 async def send_static_message():
     channel = bot.get_channel(STATIC_CHANNEL_ID)
     if not channel:
